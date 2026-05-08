@@ -1,0 +1,91 @@
+# Core Libraries
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+xgboost
+catboost
+lightgbm
+
+# Model Saving
+joblib
+pickle-mixin
+
+# Data Preprocessing
+scipy
+
+# Hyperparameter Tuning
+optuna
+
+# API Development
+flask
+flask-cors
+
+# Dashboard
+streamlit
+
+# Database (Optional)
+sqlalchemy
+
+# Notebook Support
+jupyter
+notebook
+ipykernel
+
+# Environment Variables
+python-dotenv
+
+# Model Monitoring
+evidently
+
+# Deep Learning (Future Upgrade)
+tensorflow
+
+# Utilities
+tqdm
+
+# Deployment
+gunicorn
+waitress
+
+# Docker Support
+docker
+
+# Testing
+pytest
+
+# Code Formatting
+black
+
+# Linting
+flake8
+
+# Serialization
+pyyaml
+
+# HTTP Requests
+requests
+
+# Date & Time Handling
+python-dateutil
+
+# Feature Importance Visualization
+shap
+
+# Interactive Dashboard Components
+streamlit-option-menu
+
+# Authentication (Optional)
+streamlit-authenticator
+
+# PDF Report Generation
+reportlab
+
+# Advanced Statistics
+statsmodels
