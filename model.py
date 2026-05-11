@@ -383,9 +383,17 @@ with mlflow.start_run():
         )
     joblib.dump(final_model, "best_model.pkl")
 
-    mlflow.sklearn.log_model(
-        sk_model=final_model,
-        artifact_path="best_model"
-    )
+    try:
+
+        mlflow.sklearn.log_model(
+            sk_model=final_model,
+            artifact_path="best_model"
+        )
+
+    except Exception as e:
+
+        print("\nMLFLOW LOGGING ERROR\n")
+
+        print(e)
 
     print("\nModel Saved Successfully")
