@@ -1,0 +1,11 @@
+artifact_location: file:///C:/Users/DELL/PycharmProjects/AI-Powered Mobile Addiction
+  Risk Prediction System/mlruns/882877673557022168/models/m-3b0cbabb744b468ea574d615b1e105fc/artifacts
+creation_timestamp: 1778484701637
+experiment_id: '882877673557022168'
+last_updated_timestamp: 1778484707227
+model_id: m-3b0cbabb744b468ea574d615b1e105fc
+model_type: null
+name: best_model
+source_run_id: a80a261168e54e1a9a5d2a1bfc62e33c
+status: 2
+status_message: null

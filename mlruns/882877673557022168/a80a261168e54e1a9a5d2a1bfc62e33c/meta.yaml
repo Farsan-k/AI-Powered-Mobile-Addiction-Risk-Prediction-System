@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DELL/PycharmProjects/AI-Powered Mobile Addiction Risk
+  Prediction System/mlruns/882877673557022168/a80a261168e54e1a9a5d2a1bfc62e33c/artifacts
+end_time: 1778484707245
+entry_point_name: ''
+experiment_id: '882877673557022168'
+lifecycle_stage: active
+run_id: a80a261168e54e1a9a5d2a1bfc62e33c
+run_name: learned-snail-873
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778484645012
+status: 3
+tags: []
+user_id: DELL
