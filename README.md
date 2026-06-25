@@ -81,23 +81,50 @@ The prediction service is exposed through a FastAPI REST API, making it easy to 
 # Project Structure
 
 ```text
-AI-Powered-Mobile-Addiction-Risk-Prediction-System
+AI-Powered-Mobile-Addiction-Risk-Prediction-System/
 │
-├── app.py
-├── preprocessing.py
-├── model_training.py
-├── model_testing.py
-├── feature_importance.py
-├── EDA.ipynb
-├── best_model.pkl
-├── requirements.txt
-├── Dockerfile
 ├── .github/
 │   └── workflows/
-├── mlruns/
+│       └── ci_cd.yml
+│
+├── .idea/
+│   ├── inspectionProfiles/
+│   ├── .gitignore
+│   ├── AI-Powered Mobile Addiction...
+│   ├── misc.xml
+│   ├── modules.xml
+│   └── vcs.xml
+│
+├── __pycache__/
+│   ├── app.cpython-311.pyc
+│   ├── app.cpython-312.pyc
+│   ├── app.cpython-314.pyc
+│   └── preprocessing.cpython-312.pyc
+│
 ├── catboost_info/
-├── dataset/
-└── README.md
+│   ├── learn/
+│   ├── catboost_training.json
+│   ├── learn_error.tsv
+│   └── time_left.tsv
+│
+├── mlruns/
+│
+├── 0/
+│
+├── 882877673557022168/
+│
+├── Dockerfile
+├── EDA.ipynb
+├── README.md
+├── app.py
+├── bestmodel.pkl
+├── clean.csv
+├── mobile_addiction_dataset.csv
+├── model.py
+├── preprocessing.py
+├── python.py
+├── requirements.txt
+└── streamlit_app.py
 ```
 
 ---
