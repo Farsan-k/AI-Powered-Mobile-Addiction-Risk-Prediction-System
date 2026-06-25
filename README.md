@@ -1,4 +1,4 @@
-# 📱 AI-Powered Mobile Addiction Risk Prediction System
+# AI-Powered Mobile Addiction Risk Prediction System
 
 <p align="center">
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The **AI-Powered Mobile Addiction Risk Prediction System** is an end-to-end Machine Learning solution designed to estimate a user's daily screen time and evaluate their mobile addiction risk using behavioral and device usage patterns.
 
@@ -24,7 +24,7 @@ Instead of simply predicting screen time, the system categorizes users into **Lo
 
 ---
 
-# 🎯 Problem Statement
+# Problem Statement
 
 Excessive smartphone usage has become one of the biggest digital wellness challenges worldwide.
 
@@ -36,7 +36,7 @@ This project provides an AI-driven predictive solution that automatically estima
 
 ---
 
-# 💡 Solution
+# Solution
 
 This system leverages Machine Learning to learn behavioral patterns from smartphone usage data.
 
@@ -46,7 +46,7 @@ The prediction service is exposed through a FastAPI REST API, making it easy to 
 
 ---
 
-# ✨ Key Features
+# Key Features
 
 - Predicts daily mobile screen time
 - Mobile addiction risk classification
@@ -61,7 +61,7 @@ The prediction service is exposed through a FastAPI REST API, making it easy to 
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 | Category | Technologies |
 |-----------|-------------|
@@ -78,7 +78,7 @@ The prediction service is exposed through a FastAPI REST API, making it easy to 
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```text
 AI-Powered-Mobile-Addiction-Risk-Prediction-System
@@ -102,7 +102,7 @@ AI-Powered-Mobile-Addiction-Risk-Prediction-System
 
 ---
 
-# 📊 Dataset
+# Dataset
 
 The dataset contains smartphone usage information collected from multiple users.
 
@@ -127,7 +127,7 @@ Target:
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 Clone the repository
 
@@ -165,7 +165,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run the API
+# Run the API
 
 ```bash
 uvicorn app:app --reload
@@ -181,7 +181,7 @@ to access the interactive Swagger UI.
 
 ---
 
-# 🔄 Project Workflow
+# Project Workflow
 
 ```text
 Raw Dataset
@@ -219,7 +219,7 @@ Production API
 
 ---
 
-# 📈 Feature Engineering
+# Feature Engineering
 
 The project creates additional behavioral indicators including:
 
@@ -233,7 +233,7 @@ These engineered features improve predictive performance by capturing user behav
 
 ---
 
-# 🤖 Machine Learning Models
+# Machine Learning Models
 
 Multiple regression algorithms were evaluated during experimentation, including:
 
@@ -247,7 +247,7 @@ The best-performing model was selected based on evaluation metrics and deployed 
 
 ---
 
-# 📊 API Output
+# API Output
 
 Example prediction response
 
@@ -261,7 +261,7 @@ Example prediction response
 
 ---
 
-# 📉 Model Evaluation
+# Model Evaluation
 
 The project evaluates models using appropriate regression metrics such as:
 
@@ -274,7 +274,7 @@ Model comparison and experiment history are tracked using MLflow.
 
 ---
 
-# 📦 Docker Support
+# Docker Support
 
 Build Docker image
 
@@ -290,7 +290,7 @@ docker run -p 8000:8000 mobile-addiction-api
 
 ---
 
-# 🚀 CI/CD Pipeline
+# CI/CD Pipeline
 
 The repository includes a GitHub Actions workflow that automates:
 
@@ -302,7 +302,7 @@ The repository includes a GitHub Actions workflow that automates:
 
 ---
 
-# 💼 Business Applications
+# Business Applications
 
 This solution can be integrated into:
 
@@ -315,7 +315,7 @@ This solution can be integrated into:
 
 ---
 
-# 📚 Skills Demonstrated
+# Skills Demonstrated
 
 - Machine Learning
 - Feature Engineering
@@ -333,7 +333,7 @@ This solution can be integrated into:
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 - Deep Learning-based prediction
 - Real-time user monitoring
@@ -345,7 +345,7 @@ This solution can be integrated into:
 
 ---
 
-# 🤝 Contributing
+# Contributing
 
 Contributions are welcome.
 
@@ -353,17 +353,17 @@ Feel free to fork the repository, create a feature branch, and submit a pull req
 
 ---
 
-# 📄 License
+# License
 
 This project is licensed under the MIT License.
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 **Farsan K**
 
 Data Scientist | Machine Learning Engineer
 
-- 💼 LinkedIn: https://www.linkedin.com/in/farsank/
-- 🌐 GitHub: https://github.com/Farsan-k
+- LinkedIn: https://www.linkedin.com/in/farsank/
+- GitHub: https://github.com/Farsan-k
