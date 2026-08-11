@@ -1,190 +1,134 @@
 import streamlit as st
 import requests
 
+
+
 st.set_page_config(
-
     page_title="AI-Powered Mobile Addiction Risk Prediction",
-
     page_icon="📱",
-
     layout="wide"
 )
+
 
 st.markdown("""
 <style>
 
 .stApp {
-
     background-color: #F5F7FB;
 }
 
 .block-container {
-
     padding-top: 5rem;
     padding-bottom: 2rem;
-
     max-width: 98%;
 }
 
 label {
-
     color: #0F172A !important;
-
     font-size: 17px !important;
-
     font-weight: 600 !important;
 }
 
 .stNumberInput label,
 .stSelectbox label {
-
     color: #0F172A !important;
-
     opacity: 1 !important;
 }
 
 .result-card {
-
     background: white;
-
     border-radius: 35px;
-
     padding: 60px;
-
     text-align: center;
-
-    box-shadow:
-        0px 10px 30px rgba(0,0,0,0.05);
-
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
     border: 1px solid #E2E8F0;
 }
 
 .metric-box {
-
     background: #F8FAFC;
-
     border-radius: 25px;
-
     padding: 25px;
-
     width: 55%;
-
     margin: auto;
-
     margin-top: 25px;
-
     margin-bottom: 30px;
 }
 
 .metric-text {
-
     font-size: 90px;
-
     font-weight: 800;
 }
 
 .metric-hours {
-
     font-size: 40px;
-
     font-weight: 701;
 }
 
 .low-text {
-
     color: #22C55E;
 }
 
 .medium-text {
-
     color: #F59E0B;
 }
 
 .high-text {
-
     color: #EF4444;
 }
 
 .risk-box {
-
     display: inline-block;
-
     padding: 18px 35px;
-
     border-radius: 20px;
-
     font-size: 34px;
-
     font-weight: 700;
-
     margin-bottom: 30px;
 }
 
 .low {
-
     background: #DCFCE7;
-
     color: #16A34A;
 }
 
 .medium {
-
     background: #FEF3C7;
-
     color: #D97706;
 }
 
 .high {
-
     background: #FEE2E2;
-
     color: #DC2626;
 }
 
 .message-box {
-
     background: #F8FAFC;
-
     border: 1px solid #CBD5E1;
-
     border-radius: 20px;
-
     padding: 25px;
-
     width: 60%;
-
     margin: auto;
-
     font-size: 22px;
-
     color: #475569;
 }
 
 .stButton > button {
-
     width: 100%;
-
     height: 65px;
-
     border-radius: 18px;
-
     border: none;
-
     background: linear-gradient(
         90deg,
         #2563EB,
         #38BDF8
     );
-
     color: white;
-
     font-size: 24px;
-
     font-weight: 700;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown("""
 
@@ -222,7 +166,10 @@ Predict Daily Screen Time & Digital Addiction Risk
 
 """, unsafe_allow_html=True)
 
+
+
 col1, col2 = st.columns(2)
+
 
 with col1:
 
@@ -268,6 +215,8 @@ with col1:
         3.0
     )
 
+
+
 with col2:
 
     sleep_hours = st.number_input(
@@ -312,12 +261,17 @@ with col2:
         6.0
     )
 
+
+
 predict_button = st.button(
     "Predict Addiction Risk",
     use_container_width=True
 )
 
+
+
 if predict_button:
+
 
     payload = {
 
@@ -355,20 +309,38 @@ if predict_button:
             weekend_usage
     }
 
+
+
     try:
 
         response = requests.post(
-            "http://127.0.0.1:8000/predict",
-            json=payload
+
+            "https://ai-mobile-addiction.onrender.com/predict",
+
+            json=payload,
+
+            timeout=120
         )
+
+
+
+        response.raise_for_status()
+
+
 
         result = response.json()
 
+
+
         if "error" in result:
 
-            st.error(result["error"])
+            st.error(
+                result["error"]
+            )
+
 
         else:
+
 
             predicted_time = result[
                 "predicted_screen_time_hours"
@@ -382,6 +354,8 @@ if predict_button:
                 "wellness_message"
             ]
 
+
+
             if risk == "Low Risk":
 
                 risk_class = "low"
@@ -393,6 +367,9 @@ if predict_button:
             else:
 
                 risk_class = "high"
+
+
+
 
             st.markdown(f"""
 
@@ -437,8 +414,45 @@ Hours
 
 """, unsafe_allow_html=True)
 
+
+
+    except requests.exceptions.Timeout:
+
+        st.error(
+            "FastAPI server took too long to respond. "
+            "The Render service may be waking up. "
+            "Please wait a few seconds and try again."
+        )
+
+
+
+    except requests.exceptions.ConnectionError:
+
+        st.error(
+            "Could not connect to the FastAPI server. "
+            "Please check whether the Render API is running."
+        )
+
+
+
+    except requests.exceptions.HTTPError as e:
+
+        st.error(
+            f"FastAPI returned an HTTP error: {e}"
+        )
+
+
+
+
+    except requests.exceptions.RequestException as e:
+
+        st.error(
+            f"Error Connecting FastAPI Server: {e}"
+        )
+
+
     except Exception as e:
 
         st.error(
-            f"Error Connecting FastAPI Server : {e}"
+            f"Prediction Error: {e}"
         )
