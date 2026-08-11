@@ -87,7 +87,7 @@ label {
 
     font-size: 40px;
 
-    font-weight: 700;
+    font-weight: 701;
 }
 
 .low-text {
