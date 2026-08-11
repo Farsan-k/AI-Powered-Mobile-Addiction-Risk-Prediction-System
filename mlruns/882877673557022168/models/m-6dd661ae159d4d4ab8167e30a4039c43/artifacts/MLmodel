@@ -1,0 +1,24 @@
+artifact_path: file:///C:/Users/DELL/PycharmProjects/AI-Powered Mobile Addiction Risk
+  Prediction System/mlruns/882877673557022168/models/m-6dd661ae159d4d4ab8167e30a4039c43/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.1
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.12.0
+model_id: m-6dd661ae159d4d4ab8167e30a4039c43
+model_size_bytes: 343000
+model_uuid: m-6dd661ae159d4d4ab8167e30a4039c43
+prompts: null
+run_id: cd7cc40bd1604aeeb71528269efb1d37
+utc_time_created: '2026-08-11 08:41:44.215841'

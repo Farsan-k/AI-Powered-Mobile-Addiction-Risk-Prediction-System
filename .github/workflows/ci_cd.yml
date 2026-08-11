@@ -2,16 +2,18 @@ name: ML Project CI-CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
 
   build-test-train:
-
     runs-on: ubuntu-latest
+
+    env:
+      MLFLOW_ALLOW_FILE_STORE: "true"
 
     steps:
 
@@ -21,7 +23,7 @@ jobs:
       - name: Set Up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install Dependencies
         run: |
@@ -36,10 +38,9 @@ jobs:
         run: |
           test -f best_model.pkl
 
+
   docker-build-push:
-
     needs: build-test-train
-
     runs-on: ubuntu-latest
 
     steps:
@@ -61,10 +62,9 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/mobile-addiction-app:latest
 
+
   deploy:
-
     needs: docker-build-push
-
     runs-on: ubuntu-latest
 
     steps:
